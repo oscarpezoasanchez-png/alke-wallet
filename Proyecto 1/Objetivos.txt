@@ -1,0 +1,51 @@
+Objetivos del proyecto
+
+-Aplicar la estructura basica de un sitio web
+-Uso correcto de HTML5, etiquetas semanticas y separacion por paginas.
+-Diseñar interfaces con componentes reutilizables
+-Formularios, botones, tarjetas, alertas y navegacion.
+-Manipular datos mediante JavaScript y jQuery
+-Lectura, validacion, actualizacion y presentacion dinamica.
+-Simular el funcionamiento de una billetera digital
+-Saldo, contactos, transacciones y filtros.
+-Persistir informacion en el navegador
+-Uso de LocalStorage para guardar movimientos y saldo.
+-Mensajes de exito o error, redirecciones y accesibilidad.
+-Comprender el flujo logico de una aplicacion web desde la entrada del usuario hasta la salida o respuesta visual.
+
+
+* Entradas (Input)
+
+Son los datos que el usuario ingresa o selecciona:
+    Correo y clave en el login.
+    Monto a depositar.
+    Monto a enviar.
+    Seleccion de un contacto.
+    Formulario para agregar contacto.
+    Texto para buscar contactos.
+    Filtro de tipo de transaccion.
+    Click en botones (evento como entrada).
+
+*Procesos
+
+Son las acciones internas que ejecuta la aplicacion:
+    Validar credenciales de inicio de sesion.
+    Recuperar y actualizar saldo en LocalStorage.
+    Sumar o restar montos.
+    Registrar transacciones en un arreglo y guardarlas.
+    Filtrar contactos o movimientos.
+    Cambiar de pagina mediante redireccion.
+    Mostrar u ocultar elementos en el DOM.
+    Formatear valores numericos como dinero.
+
+*Salidas (Output)
+
+Son los resultados visibles que recibe el usuario:
+    Mensajes de exito o error (alertas).
+    Acceso al menu principal tras login correcto.
+    Saldo actualizado en pantalla.
+    Lista de contactos mostrada y filtrada.
+    Lista de transacciones ordenadas.
+    Confirmacion de envio o deposito.
+    Redireccion a otras paginas.
+    Cambios visuales en botones, tarjetas o formularios.
