@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Alke Wallet - Enviar dinero</title>
+
+    <!-- CSS de Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-light">
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <!-- Tarjeta para gestionar contactos y envios -->
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title mb-3">Enviar dinero</h3>
+
+              <p class="small text-muted">
+                Selecciona un contacto y luego presiona "Enviar dinero".
+                Tambien puedes agregar contactos nuevos y buscar en la lista.
+              </p>
+
+              <!-- Boton que muestra / oculta el formulario de nuevo contacto -->
+              <button
+                id="btnToggleFormContacto"
+                class="btn btn-outline-secondary mb-3"
+                type="button"
+              >
+                Agregar nuevo contacto
+              </button>
+
+              <!-- Formulario de contacto, se oculta con la clase d-none -->
+              <form
+                id="formNuevoContacto"
+                class="border rounded p-3 mb-3 d-none"
+              >
+                <h5 class="mb-3">Nuevo contacto</h5>
+
+                <div class="mb-2">
+                  <label for="nombreContacto" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    id="nombreContacto"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="mb-2">
+                  <label for="cbuContacto" class="form-label">CBU</label>
+                  <input
+                    type="text"
+                    id="cbuContacto"
+                    class="form-control"
+                    required
+                  />
+                </div>
+
+                <div class="mb-2">
+                  <label for="aliasContacto" class="form-label">Alias</label>
+                  <input
+                    type="text"
+                    id="aliasContacto"
+                    class="form-control"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="bancoContacto" class="form-label">Banco</label>
+                  <input
+                    type="text"
+                    id="bancoContacto"
+                    class="form-control"
+                  />
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button type="submit" class="btn btn-primary">
+                    Guardar contacto
+                  </button>
+                  <button
+                    type="button"
+                    id="btnCancelarContacto"
+                    class="btn btn-outline-secondary"
+                  >
+                    Cancelar
+                  </button>
+                </div>
+              </form>
+
+              <!-- Buscador simple por nombre o alias -->
+              <form id="formBuscarContacto" class="input-group mb-3">
+                <input
+                  type="text"
+                  id="buscarTexto"
+                  class="form-control"
+                  placeholder="Buscar por nombre o alias"
+                />
+                <button class="btn btn-outline-secondary" type="submit">
+                  Buscar
+                </button>
+              </form>
+
+              <!-- Lista de contactos de ejemplo -->
+              <h5>Contactos</h5>
+              <ul id="contactList" class="list-group mb-3">
+                <li
+                  class="list-group-item"
+                  data-nombre="Ivan Zamorano"
+                  data-alias="bam bam"
+                >
+                  <div>
+                    <span class="fw-bold">Juan Perez</span><br />
+                    <small class="text-muted">
+                      CBU: 123456 | Alias: bam bam | Banco Chile
+                    </small>
+                  </div>
+                </li>
+                <li
+                  class="list-group-item"
+                  data-nombre="Ana Perez"
+                  data-alias="anita"
+                >
+                  <div>
+                    <span class="fw-bold">Maria Lopez</span><br />
+                    <small class="text-muted">
+                      CBU: 987654 | Alias: anita | Banco Estado
+                    </small>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- Boton para enviar dinero al contacto seleccionado -->
+              <button
+                id="btnEnviarDinero"
+                class="btn btn-primary w-100 mb-3 d-none"
+                type="button"
+              >
+                Enviar dinero
+              </button>
+
+              <!-- Contenedor donde se muestra el mensaje de envio -->
+              <div id="mensajeEnvio" class="mt-2"></div>
+
+              <div class="text-center">
+                <a href="menu.html" class="small">Volver al menu</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/wallet.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
